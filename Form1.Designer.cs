@@ -101,6 +101,7 @@ namespace CheatEngineDataStructParser
             this.Name = "NightFyreFrameworks";
             this.ShowIcon = false;
             this.Text = "CheatEngine DataStruct Parser";
+            this.TopMost = true;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
