@@ -4,14 +4,13 @@
 | :------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |  
 | ![image](https://user-images.githubusercontent.com/80198020/204425068-0ab9e069-9439-453a-a420-c7117d181d32.png) | ![image](https://user-images.githubusercontent.com/80198020/204425105-26d8ad17-b327-4bb1-9b3a-e446e117858a.png) |
 ## How-To-Use  
-- Dump an Unreal Engine Game with eiether CakeSan or GH CheatEngine Plugins
+- Dump an Unreal Engine Game with either CakeSan or GH CheatEngine Plugins
 - Dissect data structures to get the class you want
-- Copy the contents of the whole window
+- Copy the contents of the whole window (FROM TOP DOWN)
 - Paste the contents into "DataStructParser"
 - Input a name for the class and press "Parse XML to C++ Class"
 
-Example XML Input Data retrieved via GuidedHacking / CakeSan UnrealEngine Plugins  
-The following can be obtained by copying the Data Structure Field in CheatEngine *see screenshot*  
+Example XML Input Data retrieved via GuidedHacking / CakeSan UnrealEngine Plugins by copying the Data Structure Field in CheatEngine
 ```xml
 <Elements>
   <Element Offset="48" Vartype="Pointer" Bytesize="8" OffsetHex="00000030" Description="PlayerController" DisplayMethod="unsigned integer"/>
@@ -31,14 +30,17 @@ The following can be obtained by copying the Data Structure Field in CheatEngine
 
 **Output Result**
 ```c++
-class LocalPlayer {
-   PlayerController* PlayerController;  //  0x00000030
-   int32_t CurrentNetSpeed;  //  0x00000038
-   int32_t ConfiguredInternetSpeed;  //  0x0000003C
-   int32_t ConfiguredLanSpeed;  //  0x00000040
-   ViewportClient* ViewportClient;  //  0x00000058
-   unsigned char AspectRatioAxisConstraint;  //  0x0000007C
-   PendingLevelPlayerControllerClass* PendingLevelPlayerControllerClass;  //  0x00000080
-   unsigned char bSentSplitJoin[1];  //  0x00000088
+class LocalPlayer // : < Inherited Class > 
+{
+    //  OFFSETS
+public:
+   PlayerController* PlayerController; //   0x00000030
+   int32_t CurrentNetSpeed; //   0x00000038
+   int32_t ConfiguredInternetSpeed; //   0x0000003C
+   int32_t ConfiguredLanSpeed; //   0x00000040
+   ViewportClient* ViewportClient; //   0x00000058
+   unsigned char AspectRatioAxisConstraint; //   0x0000007C
+   PendingLevelPlayerControllerClass* PendingLevelPlayerControllerClass; //   0x00000080
+   unsigned char bSentSplitJoin; //   0x00000088 : [1]
 };
 ```
