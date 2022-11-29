@@ -1,11 +1,17 @@
 # CheatEngine-DataStructParser
 
-Example XML Input Data retrieved via GuidedHacking / CakeSan UnrealEngine Plugins
-The following can be obtained by copying the Data Structure Field in CheatEngine *see screenshot*
-<p align="center">
-<img src="https://user-images.githubusercontent.com/80198020/204420777-587e0e0a-fccf-4411-ad94-11d61273159c.png">
-</p>
+| Original                                                                                                         |   Parsed Class                                                                                               |  
+| :------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |  
+| ![image](https://user-images.githubusercontent.com/80198020/204425068-0ab9e069-9439-453a-a420-c7117d181d32.png) | ![image](https://user-images.githubusercontent.com/80198020/204425105-26d8ad17-b327-4bb1-9b3a-e446e117858a.png) |
+## How-To-Use  
+- Dump an Unreal Engine Game with eiether CakeSan or GH CheatEngine Plugins
+- Dissect data structures to get the class you want
+- Copy the contents of the whole window
+- Paste the contents into "DataStructParser"
+- Input a name for the class and press "Parse XML to C++ Class"
 
+Example XML Input Data retrieved via GuidedHacking / CakeSan UnrealEngine Plugins  
+The following can be obtained by copying the Data Structure Field in CheatEngine *see screenshot*  
 ```xml
 <Elements>
   <Element Offset="48" Vartype="Pointer" Bytesize="8" OffsetHex="00000030" Description="PlayerController" DisplayMethod="unsigned integer"/>
@@ -18,6 +24,10 @@ The following can be obtained by copying the Data Structure Field in CheatEngine
   <Element Offset="136" Vartype="Byte" Bytesize="1" OffsetHex="00000088" Description="bSentSplitJoin[1]" DisplayMethod="unsigned integer"/>
 </Elements>
 ```
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/80198020/204420777-587e0e0a-fccf-4411-ad94-11d61273159c.png">
+</p>
 
 **Output Result**
 ```c++
