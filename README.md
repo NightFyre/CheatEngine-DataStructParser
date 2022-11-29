@@ -2,6 +2,10 @@
 
 Example XML Input Data retrieved via GuidedHacking / CakeSan UnrealEngine Plugins
 The following can be obtained by copying the Data Structure Field in CheatEngine *see screenshot*
+<p align="center">
+<img src="https://user-images.githubusercontent.com/80198020/204420777-587e0e0a-fccf-4411-ad94-11d61273159c.png">
+</p>
+
 ```xml
 <Elements>
   <Element Offset="48" Vartype="Pointer" Bytesize="8" OffsetHex="00000030" Description="PlayerController" DisplayMethod="unsigned integer"/>
@@ -15,7 +19,7 @@ The following can be obtained by copying the Data Structure Field in CheatEngine
 </Elements>
 ```
 
-Output Result
+**Output Result**
 ```c++
 class LocalPlayer {
    PlayerController* PlayerController;  //  0x00000030
