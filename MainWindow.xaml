@@ -1,0 +1,113 @@
+﻿<Window x:Class="CEDataStructParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CEDataStructParser"
+        mc:Ignorable="d"
+        Height="400" Width="800"
+        Background="#36393F"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--  Main Form Title Bar  -->
+        <Border Grid.ColumnSpan="2"
+             Background="Lavender"
+                MouseDown="Border_MouseDown">
+
+            <Grid HorizontalAlignment="Stretch">
+
+                <Label Content="CheatEngine Struct Parser"
+                       Foreground="Goldenrod"
+                       FontWeight="SemiBold"/>
+
+
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+
+                    <Button Width="20" Height="20"
+                            Content="🗕"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold"
+                            Margin="0,0,0,3"
+                            Click="ButtonMinimize_Click"/>
+
+                    <Button Width="20" Height="20"
+                            Content="☐"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold"
+                            Click="ButtonMaximize_Click"/>
+
+                    <Button Width="20" Height="20"
+                            Content="✕"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold"
+                            Click="ButtonExit_Click"/>
+
+                </StackPanel>
+
+
+            </Grid>
+
+
+        </Border>
+
+        
+        <!-- -->
+        <TextBox Grid.Row="1"
+                 Height="25"
+                 Width="200"
+                 HorizontalAlignment="Left" 
+                 Text="&lt;ClassName&gt;"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Name="ClassNameEntry_TextBox"
+                 Background="Gray"/>
+        
+        <Button Grid.Row="1" 
+                Width="200"
+                Content="PARSE XML to C++" 
+                HorizontalAlignment="Center" 
+                BorderThickness="1"
+                FontWeight="SemiBold"
+                VerticalAlignment="Top" Margin="0,25,0,0"
+                Click="ParseTable_Click"/>
+
+        <Button Grid.Row="1" 
+                Width="200"
+                Content="CLEAR TABLE" 
+                HorizontalAlignment="Center" 
+                BorderThickness="1"
+                FontWeight="SemiBold"
+                VerticalAlignment="Top" Margin="0,45,0,0"
+                Click="ClearTable_Click"/>
+
+        
+        <!-- -->
+        <RichTextBox Grid.Column="1" Grid.Row="1" Name="DataTable_RichTextBox" Background="DarkGray">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Paste Cheat Engine XML Content Here"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>
