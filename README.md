@@ -2,7 +2,7 @@
 
 | Original                                                                                                         |   Parsed Class                                                                                               |  
 | :------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |  
-| ![image](https://user-images.githubusercontent.com/80198020/204425068-0ab9e069-9439-453a-a420-c7117d181d32.png) | ![image](https://user-images.githubusercontent.com/80198020/204425105-26d8ad17-b327-4bb1-9b3a-e446e117858a.png) |
+| ![image](https://user-images.githubusercontent.com/80198020/207121875-7efd2dae-45ae-4a9b-bc86-5d1f8944303f.png) | ![image](https://user-images.githubusercontent.com/80198020/207122198-47aa1657-4459-4fa5-91d7-f595ae118a16.png) |
 ## How-To-Use  
 - Dump an Unreal Engine Game with either CakeSan or GH CheatEngine Plugins
 - Dissect data structures to get the class you want
